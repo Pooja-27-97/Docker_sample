@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-const MONGO_URL = "mongodb://localhost:27017/";
+const MONGO_URL = "mongodb://purple_night:purple_2797@localhost:27017";
 const client = new MongoClient(MONGO_URL);
 
 app.get("/getUsers", async(req, res) => {
