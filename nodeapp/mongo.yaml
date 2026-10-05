@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    ports:
+    - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: purple_night
+      MONGO_INITDB_ROOT_PASSWORD: purple_2797
+
+  mongo-express:
+    image: mongo-express
+    ports:
+    - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: purple_night
+      ME_CONFIG_MONGODB_ADMINPASSWORD: purple_2797
+      ME_CONFIG_MONGODB_URL: mongodb://purple_night:purple_2797@mongo:27017/
